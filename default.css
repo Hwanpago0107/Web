@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 10px solid rgb(104, 107, 85);
+    margin: 50px 20px 30px 20px;/*바깥쪽 여백 위부터 시계방향*/
+    padding: 30px; /*안쪽 여백*/
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: aquamarine;
+    text-align: center;
+
+}
+
+a{/*a의 속성을 정의*/
+    font-size: 30px;
+    color: rgb(204, 233, 40);
+    font-weight: 500;
+}
+
+#red{ /*id로 들어가는 속성은 #으로 설정*/
+    background-color: red
+}
+
+.blue{/*class로 들어가는 스타일은 .으로 설정. 여러군데에서 쓰려는 스타일일때 class로 설정*/
+    background-color: blue;
+}
+
+#main-frame{
+    border: 5px solid rgb(138, 32, 32);
+    width: 100px;
+    height: 200px;
+    color: aqua;
+
+}
+
+.left{
+    text-align: left;
+    border: 3px solid rgb(255, 255, 255);
+    float: left;
+}
+
+.center{
+    text-align: center;
+    border: 3px solid rgb(255, 255, 255);
+    float: initial;
+}
+
+.right{
+    text-align: right;
+    border: 3px solid rgb(255, 255, 255);
+    float: right;
+}
