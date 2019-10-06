@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        console.log(1==2); // false
+        console.log(1==1); // true
+        console.log("one" == "two"); // false
+        console.log("one" == "one"); // true
+        console.log(1 == "1"); //true, 데이터 타입이 달라도 내용이 같으면 동등, 자바스크립트의 특성
+        console.log(1 === "1"); //false, ===(strict equal operator) 데이터 타입까지 완전히 같아야
+        
+        var a;
+        console.log(a); //undefined, 변수에 아무값도 정의되어있지 않음.
+        var a = null;
+        console.log(a); // null, 마찬가지로 값이 없지만 의도적으로 값이 없는 상태가 부여됨.
+        console.log(undefined == null); //true
+        console.log(undefined === null); //false
+        console.log(true == 1); //true, 숫자 1을 true로 간주
+        console.log(true === 1); // false 데이터 타입은 다르므로
+        console.log(true == 2); // false 숫자 1 이외에 숫자는 fasle
+        console.log(0/0); //NaN, 계산할 수 없음
+        console.log(NaN === NaN); //false 보기에는 똑같다 할지라도 다름
+        </script>
+    </body>
+</html>

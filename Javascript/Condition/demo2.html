@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        console.log(prompt('당신의 나이는?')); // prompt는 사용자로부터 값을 입력받는 명령어
+
+        var id = prompt('아이디를 입력해주세요. ');
+        if(id === 'egoing'){
+            var password = prompt('비밀번호를 입력해주세요. ');
+            if(password === '1111'){
+                console.log('로그인 하셨습니다 '+id+'님 반갑습니다.');
+            }else{
+                console.log('비밀번호가 다릅니다');
+            }
+        }else {
+            console.log('아이디가 일치하지 않습니다.')
+        }
+
+        id = prompt('아이디를 입력해주세요. ');
+        password = prompt('비밀번호를 입력해주세요. ');
+        if(id === 'egoing' && password === '1111'){
+            console.log('로그인 하셨습니다. '+id+'님 반갑습니다.');
+        }else{
+            console.log('아이디 혹은 패스워드가 틀립니다.');
+        } //논리 연산자를 이용하여 코드를 더 간결하게 작성할 수 있음
+        </script>
+    </body>
+</html>
+

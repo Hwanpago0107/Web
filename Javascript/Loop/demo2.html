@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        for (var i = 0; i < 10; i++) {
+            if (i === 5)
+                break;
+            document.write(" coding everybody" + i + "<br />");
+        } // 소속된 반복문을 깨고 탈출
+
+
+        for (var i = 0; i < 10; i++) {
+            if (i === 5)
+                continue;
+            document.write(" coding everybody" + i + "  <br/>");
+        } // 소속된 반복문에서 만족var조건하고 다음 순서 진행
+
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                document.write("coding everybody"+i+j+"<br/>");
+            }
+        } //i와j는 숫자지만 문자열과 결합하면 문자열로 취급
+
+    </script>
+</body>
+</html>

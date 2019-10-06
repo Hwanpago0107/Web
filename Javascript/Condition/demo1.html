@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        if(true){
+            console.log('result : true');
+        }
+        
+        if(false){
+            console.log('result : false');
+        } // 출력되지 않음
+
+        if(false){
+            console.log(1);
+        }
+        else if(true){
+            console.log(2);
+        }
+        else if(true){
+            console.log(3);
+        } // 2만 출력 else 는 앞에 조건문이 실행이 안됐을 때 유효
+        </script>
+    </body>
+</html>

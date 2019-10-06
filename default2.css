@@ -1,0 +1,48 @@
+.contents{
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.red{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 10px;
+}
+
+.blue{
+    border: 1px solid blue;
+    width: 200px;
+    height: 200px;
+    position: relative; /*관계된 부모 속성 안에서 이동*/
+    left:50px;
+}
+
+.top{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+
+}
+
+/*.btn{
+    border: 1px solid #000; 
+    text-align: center;
+    width: 300px;
+    padding: 50px;
+    position: absolute; /*브라우저를 기준으로 절대위치*/
+ /*   left: 100%;
+    margin: 0 0 0 -200px;
+    
+}*/
+
+.btn:hover{ /*마우스 올릴경우 속성*/
+    color: white;
+    background-color: #000;
+    transition: 3s; /*변화하는 속도*/
+}
