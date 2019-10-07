@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+        var member = ['egoing', 'k8805', 'sorialgi'];
+
+        console.log(member);   
+        console.log(member[0]);
+
+        function get_members(){
+            return ['egoing', 'k8805', 'sorialgi'];
+        }
+
+        members = get_members();
+
+        document.write(members[0].toUpperCase()+"</br>"); // toUpperCase() 문자를 모두 대문자롤 바꿈, 자바스크립트 내장함수
+        document.write(members[1].toUpperCase()+"</br>");
+        document.write(members[2].toUpperCase()+"</br>");
+
+        for(var i = 0; i < members.length; i++){
+            document.write(members[i].toUpperCase()+"</br>");
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var grades = {
+            "list": { "egoing": 10, "k8805": 8, "sorialgi": 80 }, // 객체 안의 객체를 담을 수 도 있음
+            "show": function () {
+                console.log("Hello world");
+            }, //객체 안의 함수를 담는 것도 가능
+            "this": function () {
+                for (var name in this.list) { //this 키워드는 함수(function)가 속해있는 객체(grades)를 가리키는 함수
+                    console.log(name, this.list[name]);
+                }
+            }
+        } //grades라는 객체의 list,show,this 등으로 grouping한 객체 지향 프로그래밍의 단례
+
+        console.log(grades["list"]); // list 에 담긴 모든 객체가 출력
+        console.log(grades["list"]["egoing"]); // list의 egoing key의 value가 출력
+        console.log(grades["show"]()); // 함수를 리턴
+        console.log(grades.show()); // 위와 동일
+        console.log(grades.this());
+    </script>
+</body>
+
+</html>

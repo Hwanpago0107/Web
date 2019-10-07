@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+        //추가
+
+        var li = ["a", "b", "c", "d", "e"];
+
+        li.push("f"); // 배열에 문자 "f"를 추가
+
+        console.log(li);
+            
+        console.log(li.concat(["1","2"])); // concat안에 있는 배열과 li에 들어있는 배열을 연결 후 리턴 해줌 하지만 li 값이 바뀌지는 않음
+
+        li = li.concat(["g", "h"]); // 배열에 복수의 원소(배열)를 추가함. 리턴값을 li에 대입했기 때문에 li 값 자체가 변화
+        
+        console.log(li);
+
+        li.unshift('z'); // 원소를 배열의 첫번째 인덱스에 추가    
+        console.log(li);
+
+        li.splice(1, 3, "*"); // 1번 인덱스 부터 세개를 제거하고 대신에 "*"을 추가, "*"옵션이고 여러개 가능.
+        console.log(li);
+
+        //제거
+
+        var li = ["a", "b", "c", "d", "e"];
+
+        console.log(li.shift()); // 첫번째 원소 a를 li 배열에서 제거하며 리턴해줌
+
+        console.log(li.pop()); //마지막 원소 e를 li 배열에서 제거하며 리턴해줌
+
+        console.log(li); // ["b", "c", "d"] 
+
+        var li = ["b", "d", "c", "a", "e"];
+
+        console.log(li.sort()); // 배열을 오름차순으로 정렬
+
+        console.log(li.reverse()); // 배열을 내림차순으로 정렬
+        </script>
+    </body>
+</html>

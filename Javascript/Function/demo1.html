@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function numbering() {
+            var i = 0;
+            while (i < 10) {
+                document.write(i+"</br>");
+                i++;
+            }
+        } //함수의 문법 형태
+        numbering();
+        numbering();
+        numbering();
+        numbering();
+        numbering(); // 함수의 재사용성, 유지보수성, 가독성이 높아짐.
+
+        //입력
+
+        function get_member1(){
+            return 'egoing';
+            return 'leezche'; // 앞 쪽 return에서 이미 함수의 동작이 완료
+            return 'graphittie'; // egoing 만 출력되고 나머지는 출력되지 않음.
+        }
+
+        function get_member2(){
+            return 'k8805';
+        }
+
+        console.log(get_member1());
+        console.log(get_member2());
+
+        //출력
+
+        function get_argument(arg){ // arg는 매개변수(parameter)
+            return arg*1000;
+        }
+
+        console.log(get_argument(1)); // 1이 get_argument 함수 arg에 입력되고 그 결과값을 반환
+        console.log(get_argument(2)); // 1과 2는 인자
+
+        var numbering = function() {
+            var i = 0;
+            while (i < 10) {
+                document.write("-----"+i+"</br>");
+                i++;
+            }
+        }  // 함수를 정의하는 또 다른 형태
+
+        numbering();
+    </script>
+</body>
+
+</html>

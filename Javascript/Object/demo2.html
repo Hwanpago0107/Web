@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <ul>
+        <script type="text/javascript">
+
+        var grades = {"egoing" : 10, "k8805" : 6, "soriragi" : 80}; //객체에는 순서가 없음
+        
+        for(key in grades){ // 객체에서 반복문을 사용하는 법, grades가 담고있는 key값을 key변수 안에 대입, 배열에서도 사용가능
+            document.write("key :"+key+" value : "+grades[key]+"</br>");
+        } 
+        
+        // 이를 이용해 프로그래밍적으로 html의 조작도 가능
+        // 아래가 예시
+            for(key in grades){ 
+            document.write("<li>key :"+key+" value : "+grades[key]+"</li>");
+        } 
+        
+        </script>
+        </ul>
+    </body>
+</html>

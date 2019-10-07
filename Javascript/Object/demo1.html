@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        var grades = {"egoing" : 10, "k8805" : 6, "soriragi" : 80};
+        // 앞의 문자가 key(index)이고 숫자가 value
+
+        console.log(grades);
+        console.log(grades["egoing"]); //10 ,객체의 값을 가져오는 방법, key를 이용
+
+        var grade = new Object();
+
+        grade["egoing"] = 10;
+        grade["k8805"] = 6;
+        grade["soriragi"] = 80;
+        // 객체를 선언하는 또 다른 방법
+
+        console.log(grade); 
+        console.log(grade.k8805); // 6, 객체의 값을 불러오는 다른 방법
+        console.log(grade["k88"+"05"]) // 6, 문자를 결합하였기 때문에 위와 동일한 값 출력
+        //console.log(grade."k88"+"05"); // 오류 프로그래밍적으로 틀림
+        </script>
+    </body>
+</html>
