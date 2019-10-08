@@ -1,0 +1,41 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+        var pattern = /a/;
+
+        var str = 'abcdef';
+
+        console.log(str.match(pattern)); // str이라는 변수안의 값에 pattern이 들어 있나
+
+        console.log(str.replace(pattern, 'A')); // pattern을 찾아서 원하는 문자로 치환해줌
+
+        var str = 'aabaca';
+
+        console.log(str.match(pattern)); // 'a'
+        console.log(str.replace(pattern, 'A')); //Aabaca, 맨처음 a만 치환해주고 끝남
+        
+        //옵션 i
+        //대소문자를 구분하지 않겠다는 옵션
+        var xi = /a/; //i 옵션을 사용하지 않는다는 의미
+        console.log("Abcde".match(xi)); // null
+
+        var oi = /a/i; //뒤에 옵션 i를 추가
+        console.log("Abcde".match(oi)); // A 를 검출
+
+        //옵션 g
+        //모든 검색 결과를 리턴
+        var xg = /a/;
+        console.log("abcdea".match(xg)); // a 
+
+        var og = /a/g;
+        console.log("abcdea".match(og)); // a,a 모든 결과를 검출
+
+        var ig = /a/ig; // 옵션을 여러개 같이 사용도 가능
+        console.log("abAcdeAa".match(ig)); // a,A,A,a   
+        </script>
+    </body>
+</html>

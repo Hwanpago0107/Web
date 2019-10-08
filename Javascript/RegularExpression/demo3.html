@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+        //캡처
+        //그룹을 지어 치환 할 수 있도록 하는 방법
+
+        var pattern = /(\w+)\s(\w+)/; // 워드와 워드사이에 공백이 있는 문자열을 담은 정규표현식
+
+        var str = 'coding everybody';
+
+        var result = str.replace(pattern, '$2, $1'); //pattern에 해당되는 문자의 순서가 바뀜
+        //$2는 두번째 word $1은 첫번째 word
+        //$2, $1의 형태로 치환되어 반환
+        console.log(result); //everybody, coding
+
+        //치환
+        var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+        var content = "네이버 : http://naver.com 입니다.";
+        var result = content.replace(urlPattern, function(url){
+            return '<a href="'+url+'">'+url+'</a>';
+        });
+
+        document.write(result);
+        
+        
+        </script>
+    </body>
+</html>

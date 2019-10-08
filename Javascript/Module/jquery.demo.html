@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="./jquery.js"></script> <!--브라우저 network 창에서 확인 가능-->
+    </head>
+    <body>
+        <ul id="list">
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+        </ul>
+        <input type="button" value="execute" id="execute_btn"/> <!--execute버튼을 생성--> 
+            <script>
+             $('#execute_btn').click(function(){
+            // execute 버튼을 클릭하면 함수가 실행되도록
+            // 함수는 밑에 작업을 수행
+            // 결과적으로 버튼을 누르면 empty라는 라인의 텍스트가 coding everybody로 변경된다.
+             $('#list li').text('coding everybody') 
+            //jquery를 이용하기 위해 $라는 예약어를 사용, 모든 경우 $로 시작
+            // #list 는 id 가 list인 태그의 하위 태그가 li인 태그들의
+            // text 들이 'coding everybody'로 변경
+             })
+            </script>
+    </body>
+</html>
