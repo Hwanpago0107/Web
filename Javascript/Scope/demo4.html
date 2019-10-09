@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+        for(var i = 0; i < 1; i++){
+            var name = 'coding everybody'; //보통의 언어들과는 다르게 함수가 아니라면
+            //for문과 같은 키워드 내부에 var로 선언되어도 지역변수의 속성을 갖지 않는다.
+        }
+
+        alert(name); // coding everybody가 출력
+
+
+        //정적 유효 범위 (lexical)
+        var i = 5; //전역 변수
+
+        function a(){
+            var i = 10;
+            b(); //3. b()가 호출된후 a()안에 지역변수를 사용하는 것이 "아님"
+        }
+
+        function b(){
+            document.write(i); // 1. 먼저 b()안에 지역변수를 찾는다
+            // 2. 이 시점에서 지역변수 i가 없으므로 전역변수의 값을 호출하여 사용
+        }
+
+        a(); // 5
+        </script>
+    </body>
+</html>

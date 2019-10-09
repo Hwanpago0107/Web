@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+
+        //값으로서의 함수
+        function a(){}; //a()라는 함수
+
+        a = { // a라는 변수에 객체를 선언
+            b : function(){ // b라는 속성(key)에 함수(값)을 할당, 이 경우에 함수를 메소드라고 부름
+            }
+        };
+
+        //인자로서의 함수
+        function cal(func, num){ // increase혹은 decrease가 func라는 파라미터의 인자로 사용됨
+            return func(num) // func는 num이라는 파라미터로 인자를 받아서 할당해주고 계산
+        }
+        function increase(num){
+            return num+1
+        }
+        function decrease(num){
+            return num-1
+        }
+
+        console.log((cal(increase, 1))); // 2
+        console.log((cal(decrease, 1))); // 0
+        
+        </script>
+    </body>
+</html>

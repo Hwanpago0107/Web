@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+       function a(){
+           var i = 0; 
+       }
+       for(var i = 0; i < 5; i++){
+           a(); //만약 a함수에서 i를 지역변수로 선언하지 않고 0을 할당했다면 계속 0으로 초기화되면서 무한루프
+           document.write(i);
+       }
+        </script>
+    </body>
+</html>
