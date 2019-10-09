@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        o1 = { val1: 1, val2: 2, val3: 3}
+        o2 = { v1: 10, v2: 50, v3: 100, v4: 25}
+        function sum() {
+            var _sum = 0;
+            for (name in this) { //o1혹은o2가 this가 됨 this를 기입될 때 옆 구문이 시행됨 (var this = o1;)
+                _sum += this[name];
+            }
+            return _sum;
+        };
+
+        console.log(sum.apply(o1)); //6, sum을 apply로 호출할때 sum이 수행하는 대상이 o1
+        console.log(sum.apply(o2));// 185, sum을 apply로 호출할때 sum이 수행하는 대상이 o2
+
+        
+        function sum2() {
+            var _sum = 0;
+            for (name in this){
+            if(typeof this[name] !== 'function')
+                _sum += this[name];
+            }
+            return _sum;
+        };
+        o3 = { val1: 1, val2: 2, val3: 3, sum2: sum2 }
+        o4 = { v1: 10, v2: 50, v3: 100, v4: 25, sum2: sum2 }
+
+        alert(o3.sum2());
+        alert(o4.sum2());
+
+    </script>
+</body>
+
+</html>

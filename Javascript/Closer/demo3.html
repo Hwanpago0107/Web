@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //closer를 사용할때 자주 발생하는 실수
+        var arr = []
+        for(var i = 0; i < 5; i++){
+            arr[i] = function(){
+                return i; //for문의 i가 외부함수에 있지 않은 상태
+                // arr[i]에는 결과값이 아닌 함수가 담겨져있는 상태
+                // 따라서 return 되는 i는 for 문을 완전히 돌고 난 후인 5를 반환하게 되고
+                // 밑에서는 5만 다섯번 출력하는 미스를 발생
+            }
+        }
+        for(var index in arr){
+            console.log(arr[index]()); //5가 다섯번 출력
+        }
+
+        //올바른 코드
+        var arr2 = []
+        for(var i = 0; i<5; i++){
+            arr2[i] = function(id){
+                return function(){
+                    return id;
+                }
+            }(i); //여기서 감싸준 함수가 실행
+            // 감싸준 함수의 매개변수와 그 함수가 리턴한 함수가 클로저 관계를 맺으면서 값이 정해져버림
+            //
+        }
+        for(var index in arr2){
+            console.log(arr2[index]());
+        }
+
+    </script>
+</body>
+
+</html>

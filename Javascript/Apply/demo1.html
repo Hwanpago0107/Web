@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //매개변수의 수
+        function func(){ //func는 function이라는 객체의 인스턴스이며 function이 가지고 있는 메소드를 사용 가능
+
+        }
+        func(); //함수를 호출하는 기본적인 방법
+
+        function sum(arg1, arg2){
+            return arg1 + arg2;
+        }
+
+        console.log(sum(1,2));
+
+        console.log(sum.apply); //apply는 내장된 native code
+        console.log(sum.apply(null, [1,2])); // 3  위와 sum과 동일한 결과
+    </script>
+</body>
+
+</html>

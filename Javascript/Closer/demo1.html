@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //외부,내부함수
+        function outter(){
+            function inner(){
+                var title = 'coding everybody';
+                console.log(title);
+            }
+            inner();
+        }
+        outter();
+
+        function outter2(){
+            var title = 'coding everybody';
+            function inner2(){
+                console.log(title); // 내부함수에서 외부함수에 접근 가능
+            }
+            inner2();
+        }
+        outter2();
+
+        function outter3(){
+            var title = 'coding everybody';
+            return function(){
+                console.log(title);
+            }
+        }
+        inner3 = outter3(); 
+        inner3(); //return이 된후에도 보존
+    </script>
+</body>
+
+</html>
