@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //prototype chain
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        var t = new Ultra();
+        t.ultraProp = 3;
+        Super.prototype = t; //만약 Sub객체에 ultraProp값이 없으면 이 라인을 삽입했을시 3이 출력
+
+        function Sub(){}
+        var s = new Super();
+        s.ultraProp = 2;
+        Sub.prototype = s; //만약 o객체에 ultraProp값이 없으면 이 라인을 삽입했을시 2가 출력
+
+        var o = new Sub();
+        o.ultraProp = 1;
+        console.log(o.ultraProp); // 1 , 기본적으로 o라는 객체가 ultraProp을 갖고 있나 검사
+        
+
+    </script>
+</body>
+
+</html>

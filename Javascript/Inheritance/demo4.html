@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //prototype : 객체의 '원형'
+        function Ultra(){}
+            Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        Super.prototype = new Ultra();
+
+        function Sub(){} // 생성자는 기본적으로 함수
+        Sub.prototype = new Super(); // protoype이라는 프로퍼티에 어떠한 객체를 할당함
+
+        var o = new Sub(); // 함수가 new 라는 키워드로 생성되므로써 생성자가 됨
+        console.log(o.ultraProp); //true
+        // Sub -> Super -> Ultra : chain 관계
+        // 우선 Sub의 UltraProp라는 객체를 갖고 있나
+        // 없으면 Super를 검색 다시 없으면 Ultra를 검색하여 사용
+
+    </script>
+</body>
+
+</html>

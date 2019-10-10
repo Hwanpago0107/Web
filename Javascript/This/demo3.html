@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //객체로서의 함수
+        
+        function sum(x,y){return x+y;} // sum이라고하는 함수 객체를 생성한것과 같다
+        //밑에 구문과 비교하여 매우 간단하다
+        //이렇게 간소화하여 정해진 문법으로 함수객체를 생성하게 되는데
+        //이를 함수 literal이라고 한다
+
+        console.log(sum(1,2));
+
+        var sum2 = new Function('x', 'y', 'return x+y;'); 
+        //sum2 라는 변수(객체)에 Function이라는 생성자를 만들어 할당
+        //결과는 동일하지만 매우 불편
+
+        console.log(sum2(1,2));
+
+        var o ={}; // 객체 리터럴
+        var o2 = new Object(); // 객체를 생성자로 만들어주는 방법 마찬가지로 번거로움
+
+        var a = [1,2,3]; // 배열 리터럴
+        var a2 = new Array(1,2,3); // 배열 객체를 생성자로 만들어주는 방법
+
+        //객체와 함수등을 쉽게 만들어주도록 명시적인 문법을 리터럴(literal)이라고 한다
+    </script>
+</body>
+
+</html>

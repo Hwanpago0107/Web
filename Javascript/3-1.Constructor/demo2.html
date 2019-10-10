@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //생성자
+        function Person(){} //Person이라는 함수를 정의
+        var p = new Person(); //new라는 키워드 뒤에 삽입되는 함수를 생성자라고 칭함.
+        //자바에서는 클래스 밑에 생성자가 소속되어 있으며 생성자를 호출함으로써 객체를 생성하지만
+        //JS에서는 생성자는 함수일뿐이고 new로 객체를 생성한다
+        p.name = 'egoing'; // 빈 객체 속성에 값을 넣어주는 행위
+        p.introduce = function(){
+                return 'My name is '+this.name;
+            }
+        
+        var p2 = new Person();
+        p2.name = 'leezche';//이름을 바꿀때마다 새로운 생성자를 추가해주어야 하고 메소드 또한 중복되기 때문에
+        // demo1에서 별로 개선된 점이 없다.
+        p2.introduce = function(){
+                return 'My name is '+this.name;
+        }
+
+        document.write(p.introduce()+"</br>");
+        document.write(p2.introduce()+"</br>");
+
+
+        //개선
+        function GoodPerson(name){ // 밑에서 name을 인자로 받아
+            this.name = name; // this.name에 인자로 받은 name 값을 할당해줌
+            this.introduce = function(){
+                return 'My name is '+this.name;
+            }
+        }
+        var gp1 = new GoodPerson('egoing'); //name 파라미터에 들어갈 인자를 넣어주면
+        document.write(gp1.introduce()+"</br>"); //메소드는 동일하게 쓰면서 인자에 따른 name이 출력
+
+        var gp2 = new GoodPerson('leezche');
+        document.write(gp2.introduce()+"</br>");
+    </script>
+</body>
+
+</html>

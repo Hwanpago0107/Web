@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //자바스크립트는 보통의 객체 지향언어들과는 매우 다르다
+        //객체 지향언어의 문법과 함수형언어의 특성을 가지고 있기 때문에 혼란스러울 수 있다.
+        
+        //객체 생성
+        var person = {} // 객체를 정의하는 부분
+        person.name = 'egoing'; //name은 객체 내부에 담긴 변수, 이를 property(속성)이라고 칭함.
+        person.introduce = function(){ //introduce는 객체 내부에 함수, 이를 method라고 칭함.
+            return 'My name is '+this.name+'</br>';
+        }
+
+        document.write(person.introduce());
+
+        //객체 생성2
+        var person = { //객체 정의부와 선언부가 결합
+            'name' : 'egoing',
+            'introduce' : function(){
+                return 'My name is '+this.name+'2';
+            }
+        }
+
+        var person2 = { // person1과 name은 다르나 메소드가 완전히 중복됨. 지양해야하는 코딩
+            'name' : 'leezche',
+            'introduce' : function(){
+                return 'My name is '+this.name+'2';
+            }
+        }
+
+        document.write(person.introduce());
+
+    </script>
+</body>
+
+</html>
