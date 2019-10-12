@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //데이터 타입
+        //1.원시(기본) 데이터 타입
+        // 숫자,문자열,불린,null,undefined 한마디로 객체가 아닌 데이터 타입
+        //2.객체 데이터 타입
+        var str = 'coding';
+        console.log(str.length); //str은 객체이고 객체 접근 연산자를 이용하여 메소드를 사용
+        // 문자열은 기본 데이터 타입인데 객체인것처럼 동작한다.
+        //str = new String('coding')에 작업이 14~15행 사이에 숨어있다고 생각하면 된다
+        //하지만 원시 데이터 타입과 객체는 좀 다른 동작방법을 갖고 있기때문에 확실한 분별이 필요하다
+        console.log(str.charAt(0)); //
+
+        str.prop = 'everybody'; //문자열에 prop 프로퍼티를 접근하여 마치 객체 처럼 사용해주어서 여기에
+        // 문자를 저장해도 에러가 나지 않았지만 밑에 구문에서는 이 객체는 제거되어 사용하는 것이 끝났기 때문에
+        //prop이라는 프로퍼티가 저장된 객체는 존재하지 않아 에러가 발생한다. 
+        //여기서 원시 데이터 타입이 있을때 원시데이터 타입을 객체로 감싸주는
+        // 객체를 weapper 객체라고 부른다.
+        // 여기서는 문자열이 원시데이터 타입인데 wrapper(String)로 감싸주어서
+        // 객체 처럼 사용할 수 있다. JS는 이러한 과정이 자동으로 실행된다.
+        console.log(str.prop); //undefined
+    </script>
+</body>
+
+</html>

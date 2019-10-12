@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+       //표준내장객체 : 자바스크립트나 호스트환경이 미리 만들어서 제공하는 객체의 모음
+        var arr = new Array('seoul', 'new york', 'ladarkh', 'pusan', 'Tsukuba');
+        function getRandomValueFromArray(arr){
+            var index = Math.floor(arr.length*Math.random());
+            return arr[index];
+        }
+        console.log(getRandomValueFromArray(arr));
+
+        //다른 방법
+        Array.prototype.random = function(){
+            var index2 = Math.floor(this.length*Math.random()); // 여기서 this가 arr2 객체를 카리킴
+            return this[index2];
+        }
+        var arr2 = new Array('A', 'B', 'C', 'D', 'E');
+        console.log(arr2.random());
+        console.log(arr.random());
+        </script>
+    </body>
+</html>

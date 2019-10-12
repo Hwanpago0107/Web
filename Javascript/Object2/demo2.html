@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+        //Object의 확장
+        //모든 객체에서 contain이라는 문자의 포함 여부를 판단하는 메소드를
+        //사용하게끔 하고 싶을때 예시
+        Object.prototype.contain = function(target){
+            for(var name in this){ //this는 메소드가 소속되어 있는 객체
+                if(this[name] === target){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var o = {'name' : 'egoing', 'city' : 'seoul'}
+        console.log(o.contain('egoing')); //true
+        console.log(o.contain('grapittie')); //false
+        var a = ['egoing', 'leezche', 'grapittie'];
+        console.log(a.contain('leezche')); //true
+
+        //이런 Object의 확장은 위험성이 존재하기때문에 신중한게 좋다
+        //모든 객체의 영향을 주는 행위이기 때문이다
+        for(var name in o){
+            console.log(name); //name, city, contain
+        } // 우리는 name과 city 속성만 추가하였으나 contain까지 포함되어 버렸다
+
+        for(var name in o){
+            if(o.hasOwnProperty(name)){ //o라는 객체가 name이라는 프로퍼티의 직접 소유하고 있냐를 체크 
+            console.log(name); // name, city
+            } //이 경우 정상적으로 포함된 값만 출력된다
+        }
+        </script>
+    </body>
+</html>

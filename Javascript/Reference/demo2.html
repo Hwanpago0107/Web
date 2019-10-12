@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //함수와 복제, 참조
+        var a = 1;
+        function func(b){
+            b = 2;
+        }
+        func(a); // b = a에 의미이지만 와 같은 의미이기때문에 a에 영향없음 
+        console.log(a); // 1
+
+        var a = {'id' :  1};
+        function func(b){
+            b = {'id' : 2};
+        }
+        func(a); // b = a가 되어 똑같은 객체를 참조하고 있지만
+        //b를 함수내에서 새로 생성해주었기때문에 a의 값은 그대로
+        console.log(a.id); // 1
+
+        var c = {'id' :  1};
+        function func(d){
+            d.id = 2 ;
+        }
+        func(c); // d = c가 되어 똑같은 객체를 참조하고 있고
+        // 동일한 객체를 참조하면서 id 프로퍼티 값을 변경해주었기때문에 c의값이 변경
+        console.log(c.id); // 2
+
+    </script>
+</body>
+
+</html>
